@@ -319,7 +319,7 @@ const animationTimeline = () => {
         skewX: "-15deg",
       },
       "party"
-    )
+    );
   
   document.querySelectorAll('*').forEach(el => {
     if (el.innerHTML && el.innerHTML.includes('<fontdir')) {
@@ -327,7 +327,7 @@ const animationTimeline = () => {
     }
   });
     
-    .staggerTo(
+    t1.staggerTo(
       ".eight svg",
       1.5,
       {
@@ -368,6 +368,7 @@ const animationTimeline = () => {
     tl.restart();
   });
 };
+
 
 
 
