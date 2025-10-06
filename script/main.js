@@ -347,12 +347,21 @@ const animationTimeline = () => {
       "+=1"
     );
 
+// Bersihkan tag <fontdir> sisa otomatis dari browser
+document.querySelectorAll('*').forEach(el => {
+  if (el.innerHTML && el.innerHTML.includes('<fontdir')) {
+    el.innerHTML = el.innerHTML.replace(/<fontdir[^>]*>/g, "").replace(/<\/fontdir>/g, "");
+  }
+});
+
+
   // Restart Animation on click
   const replyBtn = document.getElementById("replay");
   replyBtn.addEventListener("click", () => {
     tl.restart();
   });
 };
+
 
 
 
