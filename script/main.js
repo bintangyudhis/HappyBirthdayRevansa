@@ -79,13 +79,13 @@ const animationTimeline = () => {
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
   const hbd = document.getElementsByClassName("wish-hbd")[0];
 
-  textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML
+  textBoxChars.innerHTML = `<span>${textBoxChars.textContent
     .split("")
     .join("</span><span>")}</span>`;
 
 
 
-  hbd.innerHTML = `<span>${hbd.innerHTML
+  hbd.innerHTML = `<span>${hbd.textContent
     .split("")
     .join("</span><span>")}</span>`;
 
@@ -353,5 +353,6 @@ const animationTimeline = () => {
     tl.restart();
   });
 };
+
 
 
