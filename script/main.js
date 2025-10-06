@@ -320,6 +320,13 @@ const animationTimeline = () => {
       },
       "party"
     )
+  
+  document.querySelectorAll('*').forEach(el => {
+    if (el.innerHTML && el.innerHTML.includes('<fontdir')) {
+      el.innerHTML = el.innerHTML.replace(/<fontdir[^>]*>/g, "").replace(/<\/fontdir>/g, "");
+    }
+  });
+    
     .staggerTo(
       ".eight svg",
       1.5,
@@ -348,11 +355,11 @@ const animationTimeline = () => {
     );
 
 // Bersihkan tag <fontdir> sisa otomatis dari browser
-document.querySelectorAll('*').forEach(el => {
-  if (el.innerHTML && el.innerHTML.includes('<fontdir')) {
-    el.innerHTML = el.innerHTML.replace(/<fontdir[^>]*>/g, "").replace(/<\/fontdir>/g, "");
-  }
-});
+// document.querySelectorAll('*').forEach(el => {
+//   if (el.innerHTML && el.innerHTML.includes('<fontdir')) {
+//     el.innerHTML = el.innerHTML.replace(/<fontdir[^>]*>/g, "").replace(/<\/fontdir>/g, "");
+//   }
+// });
 
 
   // Restart Animation on click
@@ -361,6 +368,7 @@ document.querySelectorAll('*').forEach(el => {
     tl.restart();
   });
 };
+
 
 
 
