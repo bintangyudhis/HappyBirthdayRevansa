@@ -79,14 +79,10 @@ const animationTimeline = () => {
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
   const hbd = document.getElementsByClassName("wish-hbd")[0];
 
-  // textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML
-  //   .split("")
-  //   .join("</span><span>")}</span>`;
-  const originalText = textBoxChars.textContent; // ambil teks polos
-  textBoxChars.innerHTML = originalText
+  textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML
     .split("")
-    .map(char => `<span>${char}</span>`)
-    .join("");
+    .join("</span><span>")}</span>`;
+
 
 
   hbd.innerHTML = `<span>${hbd.innerHTML
@@ -357,4 +353,5 @@ const animationTimeline = () => {
     tl.restart();
   });
 };
+
 
