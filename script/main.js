@@ -327,7 +327,7 @@ const animationTimeline = () => {
     }
   });
     
-    t1.staggerTo(
+    tl.staggerTo(
       ".eight svg",
       1.5,
       {
@@ -368,6 +368,7 @@ const animationTimeline = () => {
     tl.restart();
   });
 };
+
 
 
 
