@@ -337,7 +337,7 @@ body {
   }
 
   .six .hat {
-    top: -20px;
+    /* top: -20px; */
     width: 80px;
     left: 49.5%;
   }
